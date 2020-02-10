@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">entfun</string>
+    <string name="app_name">EntFun</string>
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
     <string name="completed">Congratulations!! \n You have completed the level.</string>
@@ -110,7 +110,7 @@
     <string name="msg_opinion">Audience poll: use audience paul for check other users choose option(deduct 4 coins).</string>
     <string name="msg_reset">Reset timer: Reset timer again if you needed more time score (deduct 2 coins).</string>
     <string name="msg_leaderboard">You can compare your score with other users of apps</string>
-    <string name="leaderboard">LeaderBoard</string>
+    <string name="leaderboard">Чемпионы</string>
 
 
     <string name="textsize_dialog_lbl_fontsize">Font Size</string>
