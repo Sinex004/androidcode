@@ -21,7 +21,7 @@
         android:background="@color/bg_color"
         android:fitsSystemWindows="true"
         app:arc_cropDirection="cropInside"
-        app:arc_width="75dp"
+        app:arc_width="0dp"
         app:headerLayout="@layout/header_lyt"
         app:itemBackground="@drawable/drawer_select"
         app:itemIconTint="@color/drawer_icon"
