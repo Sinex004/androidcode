@@ -77,7 +77,6 @@ public class CategoryActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(getString(R.string.select_category));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mAdView = findViewById(R.id.banner_AdView);
-        mAdView.loadAd(new AdRequest.Builder().build());
 
         empty_msg = findViewById(R.id.txtblanklist);
         progressBar = findViewById(R.id.progressBar);

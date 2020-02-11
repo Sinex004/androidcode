@@ -55,8 +55,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.knn.entfun.Constant;
 import com.knn.entfun.R;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
 import com.knn.entfun.activity.LoginActivity;
 import com.knn.entfun.model.Language;
 
@@ -75,8 +73,6 @@ import java.util.Objects;
 
 public class Utils {
     public static TextToSpeech textToSpeech;
-    public static AdRequest adRequest;
-    public static InterstitialAd interstitial;
     public static SharedPreferences sharedPreferences;
     public static SharedPreferences.Editor editor;
     public static AlertDialog alertDialog;
@@ -169,23 +165,6 @@ public class Utils {
         return false;
     }
 
-    public static void loadAd(Context context) {
-
-        interstitial = new InterstitialAd(context);
-        interstitial.setAdUnitId(context.getString(R.string.admob_interstitial_id));
-        adRequest = new AdRequest.Builder().build();
-        interstitial.loadAd(adRequest);
-    }
-
-    public static void displayInterstitial() {
-        if (interstitial.isLoaded()) {
-            interstitial.show();
-        } else {
-            adRequest = new AdRequest.Builder().build();
-            interstitial.loadAd(adRequest);
-            interstitial.show();
-        }
-    }
 
     public static void CheckVibrateOrSound(Context context) {
 

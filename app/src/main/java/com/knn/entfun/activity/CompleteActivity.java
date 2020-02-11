@@ -67,8 +67,6 @@ public class CompleteActivity extends AppCompatActivity {
         fromQue = getIntent().getStringExtra("fromQue");
         context = CompleteActivity.this;
 
-        Utils.loadAd(CompleteActivity.this);
-
         result_prog = findViewById(R.id.result_progress);
         result_prog.SetAttributes1();
         scrollView = findViewById(R.id.scrollView);
@@ -112,13 +110,6 @@ public class CompleteActivity extends AppCompatActivity {
         tvCorrect.setText("" + Utils.CoreectQuetion);
         tvInCorrect.setText("" + Utils.WrongQuation);
 
-        Utils.interstitial.setAdListener(new AdListener() {
-            @Override
-            public void onAdClosed() {
-                super.onAdClosed();
-                Utils.loadAd(CompleteActivity.this);
-            }
-        });
         if (Session.isLogin(CompleteActivity.this)) {
             GetUserData();
         }
@@ -155,7 +146,6 @@ public class CompleteActivity extends AppCompatActivity {
     }
 
     public void RateApp(View view) {
-        Utils.displayInterstitial();
         rateClicked();
     }
 
@@ -226,7 +216,6 @@ public class CompleteActivity extends AppCompatActivity {
     @Override
     public void onResume() {
         super.onResume();
-        Utils.loadAd(CompleteActivity.this);
     }
 
     @Override

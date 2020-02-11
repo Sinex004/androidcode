@@ -114,7 +114,7 @@ public class MainActivity extends DrawerActivity implements View.OnClickListener
         lytPlay.setOnClickListener(this);
 
         settings = getSharedPreferences(Session.SETTING_Quiz_PREF, 0);
-        rewardedVideoAd = MobileAds.getRewardedVideoAdInstance(getApplicationContext());
+        //rewardedVideoAd = MobileAds.getRewardedVideoAdInstance(getApplicationContext());
         PlayActivity.loadRewardedVideoAd(MainActivity.this);
         type = getIntent().getStringExtra("type");
 

@@ -68,7 +68,6 @@ public class DrawerActivity extends AppCompatActivity implements NavigationView.
                 }
             }
         });
-        Utils.loadAd(DrawerActivity.this);
     }
 
     @Override
@@ -92,7 +91,6 @@ public class DrawerActivity extends AppCompatActivity implements NavigationView.
                     Intent statistic = new Intent(getApplicationContext(), UserStatistics.class);
                     startActivity(statistic);
                 }
-                Utils.displayInterstitial();
                 drawerLayout.closeDrawers();
                 break;
 
@@ -105,14 +103,12 @@ public class DrawerActivity extends AppCompatActivity implements NavigationView.
                 Intent notification = new Intent(getApplicationContext(), NotificationList.class);
                 startActivity(notification);
                 drawerLayout.closeDrawers();
-                Utils.displayInterstitial();
                 break;
             case R.id.bookmark:
 
                 Intent bookmark = new Intent(getApplicationContext(), BookmarkList.class);
                 startActivity(bookmark);
                 drawerLayout.closeDrawers();
-                Utils.displayInterstitial();
                 break;
 
             case R.id.invite:
@@ -122,14 +118,12 @@ public class DrawerActivity extends AppCompatActivity implements NavigationView.
                     Intent invite = new Intent(getApplicationContext(), InviteFriendActivity.class);
                     startActivity(invite);
                 }
-                Utils.displayInterstitial();
                 drawerLayout.closeDrawers();
                 break;
             case R.id.instruction:
                 Intent instruction = new Intent(getApplicationContext(), InstructionActivity.class);
                 startActivity(instruction);
                 drawerLayout.closeDrawers();
-                Utils.displayInterstitial();
                 break;
             case R.id.share:
                 Intent intent = new Intent(Intent.ACTION_SEND);
