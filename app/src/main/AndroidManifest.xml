@@ -60,9 +60,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.google.android.gms.ads.AdActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
-        <activity
             android:name="com.knn.entfun.activity.SettingActivity"
             android:label=""
             android:theme="@style/Theme.AppCompat.Light.Dialog" />

@@ -62,7 +62,6 @@ public class NotificationList extends AppCompatActivity {
         getSupportActionBar().setTitle(getString(R.string.noti_list));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mAdView = findViewById(R.id.banner_AdView);
-        mAdView.loadAd(new AdRequest.Builder().build());
 
         empty_msg = findViewById(R.id.txtblanklist);
         progressBar = findViewById(R.id.progressBar);

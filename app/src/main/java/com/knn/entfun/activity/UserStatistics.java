@@ -16,8 +16,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.StringRequest;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 import com.knn.entfun.Constant;
 import com.knn.entfun.R;
 import com.knn.entfun.helper.AppController;
@@ -55,8 +53,6 @@ public class UserStatistics extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(getString(R.string.user_statistics));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        AdView mAdView = findViewById(R.id.banner_AdView);
-        mAdView.loadAd(new AdRequest.Builder().build());
         imgProfile = findViewById(R.id.imgProfile);
         tvName = findViewById(R.id.tvName);
         tvRank = findViewById(R.id.tvRank);

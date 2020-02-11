@@ -23,8 +23,7 @@
             android:id="@+id/swipeLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/divider"
-            android:layout_above="@+id/banner_AdView">
+            android:layout_below="@+id/divider">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView"
@@ -48,14 +47,5 @@
             android:textColor="@color/txt_color"
             android:textSize="@dimen/mid_text"
             android:visibility="gone" />
-
-        <com.google.android.gms.ads.AdView
-            android:id="@+id/banner_AdView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            app:adSize="BANNER"
-            app:adUnitId="@string/admob_banner_id" />
 
 </RelativeLayout>

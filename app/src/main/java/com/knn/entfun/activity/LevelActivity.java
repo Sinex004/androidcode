@@ -63,7 +63,6 @@ public class LevelActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(R.string.select_level);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         AdView mAdView = findViewById(R.id.banner_AdView);
-        mAdView.loadAd(new AdRequest.Builder().build());
         invalidateOptionsMenu();
 
         progressBar = findViewById(R.id.progressBar);
