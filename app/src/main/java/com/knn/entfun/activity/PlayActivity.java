@@ -178,15 +178,15 @@ public class PlayActivity extends AppCompatActivity implements OnClickListener {
             }
         });
 
-        rewardedVideoAd.setRewardedVideoAdListener(rewardedVideoAdListener);
+        //rewardedVideoAd.setRewardedVideoAdListener(rewardedVideoAdListener);
 
         progressTimer.setMaxProgress(Constant.CIRCULAR_MAX_PROGRESS);
         progressTimer.setCurrentProgress(Constant.CIRCULAR_MAX_PROGRESS);
-        try {
+        /*try {
             interstitial = new InterstitialAd(PlayActivity.this);
-            interstitial.setAdUnitId(getString(R.string.admob_interstitial_id));
-            adRequest = new AdRequest.Builder().build();
-            interstitial.loadAd(adRequest);
+            //interstitial.setAdUnitId(getString(R.string.admob_interstitial_id));
+            //adRequest = new AdRequest.Builder().build();
+            //interstitial.loadAd(adRequest);
             interstitial.setAdListener(new AdListener() {
                 @Override
                 public void onAdOpened() {
@@ -206,7 +206,7 @@ public class PlayActivity extends AppCompatActivity implements OnClickListener {
             });
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        }*/
 
     }
 
@@ -750,8 +750,7 @@ public class PlayActivity extends AppCompatActivity implements OnClickListener {
                     FiftyFiftyWithout_E();
 
                 Session.setFifty_Fifty(PlayActivity.this);
-            } else
-                ShowRewarded(PlayActivity.this);
+            }
 
         } else
             AlreadyUsed();
@@ -844,8 +843,7 @@ public class PlayActivity extends AppCompatActivity implements OnClickListener {
 
                 nextQuizQuestion();
                 Session.setSkip(PlayActivity.this);
-            } else
-                ShowRewarded(PlayActivity.this);
+            }
         } else
             AlreadyUsed();
     }
@@ -869,8 +867,7 @@ public class PlayActivity extends AppCompatActivity implements OnClickListener {
                 option_d.setVisibility(View.VISIBLE);
                 option_e.setVisibility(View.VISIBLE);
                 Session.setAudiencePoll(PlayActivity.this);
-            } else
-                ShowRewarded(PlayActivity.this);
+            }
         } else
             AlreadyUsed();
     }
@@ -1008,8 +1005,7 @@ public class PlayActivity extends AppCompatActivity implements OnClickListener {
                 stopTimer();
                 starTimer();
                 Session.setReset(PlayActivity.this);
-            } else
-                ShowRewarded(PlayActivity.this);
+            }
         } else
             AlreadyUsed();
     }
@@ -1337,7 +1333,7 @@ public class PlayActivity extends AppCompatActivity implements OnClickListener {
             watchNow.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    showRewardedVideo();
+                    //showRewardedVideo();
                     alertDialog.dismiss();
                     isDialogOpen = false;
                 }
@@ -1359,12 +1355,12 @@ public class PlayActivity extends AppCompatActivity implements OnClickListener {
 
     public static void loadRewardedVideoAd(Context context) {
 
-        if (!rewardedVideoAd.isLoaded()) {
-            rewardedVideoAd.loadAd(context.getResources().getString(R.string.admob_Rewarded_Video_Ads), new AdRequest.Builder().build());
-        }
+        //if (!rewardedVideoAd.isLoaded()) {
+        //    rewardedVideoAd.loadAd(context.getResources().getString(R.string.admob_Rewarded_Video_Ads), new AdRequest.Builder().build());
+        //}
     }
 
-    RewardedVideoAdListener rewardedVideoAdListener = new RewardedVideoAdListener() {
+    /*RewardedVideoAdListener rewardedVideoAdListener = new RewardedVideoAdListener() {
         @Override
         public void onRewardedVideoAdLoaded() {
         }
@@ -1417,7 +1413,7 @@ public class PlayActivity extends AppCompatActivity implements OnClickListener {
         }
 
 
-    };
+    };*/
 
     public class Timer extends CountDownTimer {
         private Timer(long millisInFuture, long countDownInterval) {

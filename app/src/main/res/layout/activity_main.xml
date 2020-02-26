@@ -59,12 +59,12 @@
                         android:id="@+id/tvPlay"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
                         android:layout_gravity="center"
                         android:layout_marginStart="@dimen/margin_dp"
                         android:layout_marginEnd="@dimen/margin_dp"
                         android:drawablePadding="@dimen/margin_dp"
                         android:fontFamily="@font/open_sans_bold"
+                        android:gravity="center"
                         android:paddingStart="@dimen/margin_dp"
                         android:paddingTop="8dp"
                         android:paddingEnd="@dimen/margin_dp"
@@ -125,11 +125,11 @@
 
             >
 
-            <ImageView
+            <!--ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:src="@drawable/logo" />
+                android:src="@drawable/logo" /-->
 
         </RelativeLayout>
 

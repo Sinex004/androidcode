@@ -91,7 +91,6 @@ public class ReviewActivity extends AppCompatActivity {
             public void onPageScrollStateChanged(int state) {
             }
         });
-        Utils.displayInterstitial();
 
         prev.setOnClickListener(new View.OnClickListener() {
             @Override

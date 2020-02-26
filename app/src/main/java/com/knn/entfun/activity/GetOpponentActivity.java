@@ -1061,7 +1061,6 @@ public class GetOpponentActivity extends AppCompatActivity {
 
     public void bannerAdd() {
         AdRequest adRequest1 = new AdRequest.Builder().build();
-        adView.loadAd(adRequest1);
     }
 
     @Override

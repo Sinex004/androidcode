@@ -73,7 +73,6 @@ public class SubcategoryActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(Constant.cate_name);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mAdView = findViewById(R.id.banner_AdView);
-        mAdView.loadAd(new AdRequest.Builder().build());
 
         txtBlankList = findViewById(R.id.txtblanklist);
         progressBar = findViewById(R.id.progressBar);
