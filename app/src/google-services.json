@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "599231731047",
+    "firebase_url": "https://ent-fun.firebaseio.com",
+    "project_id": "ent-fun",
+    "storage_bucket": "ent-fun.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:599231731047:android:07e02485af3723f6774bc2",
+        "android_client_info": {
+          "package_name": "com.knn.entfun"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "599231731047-atthprng6coc8s8hg75iq395s11m8h35.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWn3LwO9YYi6snPuNJNiVtgPJUrpN3Zu8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "599231731047-atthprng6coc8s8hg75iq395s11m8h35.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

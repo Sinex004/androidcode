@@ -115,6 +115,7 @@ public class Constant {
     public static String OPPONENT_PROFILE = "opponent_profile";
     public static String MY_STATUS = "mystatus";
     public static String GLOBAL_SCORE = "all_time_score";
+
     public static String GLOBAL_RANK = "all_time_rank";
     public static String KEY_MORE_APP = "more_apps";
     public static String DEFAULT = "default";

@@ -264,7 +264,9 @@ public class LoginActivity extends AppCompatActivity {
                     JSONObject obj = new JSONObject(response);
                     if (obj.getString("error").equals("false")) {
                         JSONObject jsonobj = obj.getJSONObject("data");
+                        System.out.println("eroooooooooooooooooooooooooor");
                         if (!jsonobj.getString(Constant.status).equals(Constant.DE_ACTIVE)) {
+                            System.out.println("errrrrooooooor222222222222222222222222222");
                             Session.saveUserDetail(getApplicationContext(),
                                     jsonobj.getString(Constant.userId),
                                     jsonobj.getString(Constant.name),
@@ -272,14 +274,17 @@ public class LoginActivity extends AppCompatActivity {
                                     jsonobj.getString(Constant.mobile),
                                     jsonobj.getString(Constant.PROFILE), referCode);
                             User user = new User(jsonobj.getString(Constant.name), jsonobj.getString(Constant.email), "0", false, jsonobj.getString(Constant.PROFILE), "0", token, jsonobj.getString(Constant.userId));
-
+                            System.out.println("user createeed////////////////////////////////");
                             FirebaseDatabase.getInstance().getReference("user").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task1) {
+                                    System.out.println("workiiiiiiiiiiiiiiiiiiing with firebase");
                                     Intent i = new Intent(getApplicationContext(), MainActivity.class);
                                     i.putExtra("type", "default");
                                     i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                    System.out.println("BEFORE STARTING START ACTIVITY");
                                     startActivity(i);
+                                    System.out.println("BEFORE STARTING FINISH");
                                     finish();
                                 }
                             });
@@ -383,6 +388,7 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+                            System.out.println("              firebaseAuthWithGoogle is Successfull");
                             // Sign in success, update UI with the signed-in user's information
                             boolean isNew = task.getResult().getAdditionalUserInfo().isNewUser();
                             FirebaseUser user = mAuth.getCurrentUser();
@@ -397,10 +403,15 @@ public class LoginActivity extends AppCompatActivity {
 
 
                             if (isNew) {
+                                System.out.println("                 it is new++++++++++++++++++++++++++++++++++++++++++++");
                                 hideProgressDialog();
+                                System.out.println("");
                                 ShowReferDialog(userName[0], personName, email, user.getPhotoUrl().toString(), "gmail");
                             } else
-                                UserSignUpWithSocialMedia("", userName[0], user.getDisplayName(), user.getEmail(), user.getPhotoUrl().toString(), "gmail");
+                                System.out.println("                 it is not new--------------------------------------");
+
+                            System.out.println(" starting UserSignUpWithSocialMedia *****************************");
+                            UserSignUpWithSocialMedia("", userName[0], user.getDisplayName(), user.getEmail(), user.getPhotoUrl().toString(), "gmail");
                         } else {
                             hideProgressDialog();
 
@@ -634,6 +645,11 @@ public class LoginActivity extends AppCompatActivity {
                 firebaseAuthWithGoogle(account);
 
             } catch (ApiException e) {
+                System.out.println("o o o o o o o o o o");
+                System.out.println("o o o o o o o o o o");
+                System.out.println("o o o o o o o o o o");
+                System.out.println("o o o o o o o o o o");
+                System.out.println("o o o o o o o o o o");
 
             }
         } else {
