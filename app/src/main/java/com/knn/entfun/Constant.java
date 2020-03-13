@@ -145,7 +145,7 @@ public class Constant {
     public static long LeftTime;
     public static int TotalLevel;
     public static int CATE_ID;
-    public static int SUB_CAT_ID;
+    public static int SUB_CAT_ID = 0;
     public static String cate_name;
     public static String sub_cate_name;
     public static String LANGUAGE_MODE;

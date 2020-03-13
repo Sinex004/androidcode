@@ -41,6 +41,8 @@ import com.google.android.gms.ads.AdView;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.knn.entfun.Constant.SUB_CAT_ID;
+
 public class LevelActivity extends AppCompatActivity {
     public Toolbar toolbar;
     LevelListAdapter adapter;
@@ -70,7 +72,7 @@ public class LevelActivity extends AppCompatActivity {
         tvAlert = findViewById(R.id.tvAlert);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(LevelActivity.this));
-        levelNo = MainActivity.dbHelper.GetLevelById(Constant.CATE_ID, Constant.SUB_CAT_ID);
+        levelNo = MainActivity.dbHelper.GetLevelById(Constant.CATE_ID, SUB_CAT_ID);
 
         fromQue = getIntent().getStringExtra("fromQue");
         levelList = new ArrayList<>();
@@ -133,7 +135,7 @@ public class LevelActivity extends AppCompatActivity {
         @Override
         public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
             LevelViewHolder viewHolder = (LevelViewHolder) holder;
-            levelNo = MainActivity.dbHelper.GetLevelById(Constant.CATE_ID, Constant.SUB_CAT_ID);
+            levelNo = MainActivity.dbHelper.GetLevelById(Constant.CATE_ID, SUB_CAT_ID);
             Level level = levelList.get(position);
             viewHolder.levelNo.setText(getString(R.string.level_txt) + level.getLevel());
             if (levelNo >= position + 1)

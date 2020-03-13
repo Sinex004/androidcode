@@ -261,22 +261,26 @@ public class CategoryActivity extends AppCompatActivity {
                         public void onClick(View v) {
                             Constant.CATE_ID = Integer.parseInt(category.getId());
                             Constant.cate_name = category.getName();
-                            if (!category.getNoOfCate().equals("0")) {
-                                Intent intent = new Intent(CategoryActivity.this, SubcategoryActivity.class);
-                                startActivity(intent);
-                            } else {
+//                            if (!category.getNoOfCate().equals("0")) {
+//                                Intent intent = new Intent(CategoryActivity.this, SubcategoryActivity.class);
+//                                startActivity(intent);
+//                            } else {
 
-                                if (category.getMaxLevel() == null) {
-                                    Constant.TotalLevel = 0;
-                                } else if (category.getMaxLevel().equals("null")) {
-                                    Constant.TotalLevel = 0;
-                                } else {
-                                    Constant.TotalLevel = Integer.parseInt(category.getMaxLevel());
-                                }
-                                Intent intent = new Intent(CategoryActivity.this, LevelActivity.class);
-                                intent.putExtra("fromQue", "cate");
-                                startActivity(intent);
-                            }
+//                                if (category.getMaxLevel() == null) {
+//                                    Constant.TotalLevel = 0;
+//                                } else if (category.getMaxLevel().equals("null")) {
+//                                    Constant.TotalLevel = 0;
+//                                } else {
+//                                    Constant.TotalLevel = Integer.parseInt(category.getMaxLevel());
+//                                }
+                                //-------------------------------------
+                            Constant.TotalLevel = 2;
+                            System.out.println(Constant.TotalLevel + "-----------");
+                                //--------------------------------------
+                            Intent intent = new Intent(CategoryActivity.this, LevelActivity.class);
+                            intent.putExtra("fromQue", "subCate");
+                            startActivity(intent);
+//                            }
 
                         }
                     });

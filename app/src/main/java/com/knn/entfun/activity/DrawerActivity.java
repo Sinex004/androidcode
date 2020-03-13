@@ -99,11 +99,11 @@ public class DrawerActivity extends AppCompatActivity implements NavigationView.
                 startActivity(setting);
                 break;
 
-            case R.id.notification:
-                Intent notification = new Intent(getApplicationContext(), NotificationList.class);
-                startActivity(notification);
-                drawerLayout.closeDrawers();
-                break;
+//            case R.id.notification:
+//                Intent notification = new Intent(getApplicationContext(), NotificationList.class);
+//                startActivity(notification);
+//                drawerLayout.closeDrawers();
+//                break;
             case R.id.bookmark:
 
                 Intent bookmark = new Intent(getApplicationContext(), BookmarkList.class);
@@ -111,15 +111,15 @@ public class DrawerActivity extends AppCompatActivity implements NavigationView.
                 drawerLayout.closeDrawers();
                 break;
 
-            case R.id.invite:
-                if (!Session.isLogin(getApplicationContext())) {
-                    LoginPopUp();
-                } else {
-                    Intent invite = new Intent(getApplicationContext(), InviteFriendActivity.class);
-                    startActivity(invite);
-                }
-                drawerLayout.closeDrawers();
-                break;
+//            case R.id.invite:
+//                if (!Session.isLogin(getApplicationContext())) {
+//                    LoginPopUp();
+//                } else {
+//                    Intent invite = new Intent(getApplicationContext(), InviteFriendActivity.class);
+//                    startActivity(invite);
+//                }
+//                drawerLayout.closeDrawers();
+//                break;
             case R.id.instruction:
                 Intent instruction = new Intent(getApplicationContext(), InstructionActivity.class);
                 startActivity(instruction);
@@ -137,17 +137,17 @@ public class DrawerActivity extends AppCompatActivity implements NavigationView.
                 about.putExtra("type", "about");
                 startActivity(about);
                 break;
-            case R.id.terms:
-                Intent terms = new Intent(getApplicationContext(), PrivacyPolicy.class);
-                terms.putExtra("type", "terms");
-                startActivity(terms);
-                break;
-            case R.id.privacy:
-                Intent privacy = new Intent(getApplicationContext(), PrivacyPolicy.class);
-                privacy.putExtra("type", "privacy");
-                startActivity(privacy);
-                drawerLayout.closeDrawers();
-                break;
+//            case R.id.terms:
+//                Intent terms = new Intent(getApplicationContext(), PrivacyPolicy.class);
+//                terms.putExtra("type", "terms");
+//                startActivity(terms);
+//                break;
+//            case R.id.privacy:
+//                Intent privacy = new Intent(getApplicationContext(), PrivacyPolicy.class);
+//                privacy.putExtra("type", "privacy");
+//                startActivity(privacy);
+//                drawerLayout.closeDrawers();
+//                break;
             default:
         }
         return false;
